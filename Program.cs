@@ -55,7 +55,33 @@ namespace HW_02_04_task4
                     System.Console.Write("Выберите нужную функцию: ");
                     
                     int x = int.Parse(Console.ReadLine());
-                    
+                    switch (x)
+                    {
+                        case 1:
+                        System.Console.WriteLine();
+                        System.Console.Write("Введите номер: ");
+                        int a = int.Parse(Console.ReadLine());
+                        int cnt = 0;
+                        for (int i = a; i > 0;  i /= 10,cnt++);
+                        if(cnt==9){
+                            System.Console.WriteLine("Звоним в номер: "+a);
+                            System.Console.WriteLine("Телефон ещё бета)");
+                        }
+                        else System.Console.WriteLine("Неверный номер!");
+
+                        System.Console.WriteLine();
+                        break;
+                        case 2:
+                        showInfo();
+                        break;
+                        case 3:
+                        sostayan = false;
+                        break;
+                        default:
+                        System.Console.WriteLine("Неверная опция");
+                        break;
+
+                    }
                 }
 
             }else{
